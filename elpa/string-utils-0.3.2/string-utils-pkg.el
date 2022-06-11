@@ -1,0 +1,2 @@
+;;; Generated package description from string-utils.el  -*- no-byte-compile: t -*-
+(define-package "string-utils" "0.3.2" "String-manipulation utilities" '((list-utils "0.4.2")) :commit "3ae530143899f533a9ef5e1f26f28b577ebe72ee" :authors '(("Roland Walker" . "walker@pobox.com")) :maintainer '("Roland Walker" . "walker@pobox.com") :keywords '("extensions") :url "http://github.com/rolandwalker/string-utils")
