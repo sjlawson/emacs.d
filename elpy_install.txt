@@ -1,0 +1,7 @@
+
+at present (5 Dec 2022) Melpa seems to break the elpy package.
+
+1. get code: `git clone git@github.com:jorgenschaefer/elpy.git`
+2. start emacs, auto-install deps
+3. close & restart
+4. Hae yersel ae wee dram cause it's ah guid noo ;)

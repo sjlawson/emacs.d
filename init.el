@@ -74,6 +74,9 @@
 (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
 (autoload 'csv-mode "csv-mode"
   "Major mode for editing comma-separated value files." t)
+
+(add-to-list 'load-path "/Users/samuellawson/.emacs.d/elpy")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -84,7 +87,15 @@
  '(custom-enabled-themes '(wheatgrass))
  '(js-indent-level 2)
  '(package-selected-packages
-   '(lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode elpy ##)))
+   '(lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode ##)))
+
+(load "elpy")
+(load "elpy-rpc")
+(load "elpy-shell")
+(load "elpy-profile")
+(load "elpy-refactor")
+(load "elpy-django")
+
 (custom-set-faces
 
  ;; custom-set-faces was added by Custom.

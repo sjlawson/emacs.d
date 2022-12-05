@@ -1,4 +1,6 @@
 *pyc
 .cache/
 elpy
-
+auto-save-list
+.#*
+#*
