@@ -31,6 +31,8 @@ evaluate `auto-complete-mode'.
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
 
+\\{ac-mode-map}
+
 \(fn &optional ARG)" t nil)
 
 (put 'global-auto-complete-mode 'globalized-minor-mode t)

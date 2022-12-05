@@ -86,6 +86,13 @@ result of `defhydra'.
 
 ;;;***
 
+;;;### (autoloads nil "lv" "lv.el" (0 0 0 0))
+;;; Generated autoloads from lv.el
+
+(register-definition-prefixes "lv" '("lv-"))
+
+;;;***
+
 ;;;### (autoloads nil nil ("hydra-pkg.el") (0 0 0 0))
 
 ;;;***

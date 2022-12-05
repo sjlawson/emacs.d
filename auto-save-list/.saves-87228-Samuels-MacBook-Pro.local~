@@ -1,0 +1,16 @@
+/Users/samuellawson/Downloads/tmp/DOCDB-202008-001-AM-0001.xml
+/Users/samuellawson/Downloads/tmp/#DOCDB-202008-001-AM-0001.xml#
+/Users/samuellawson/workspace/resolute/resolute/index/ieee_indexer.py
+/Users/samuellawson/workspace/resolute/resolute/index/#ieee_indexer.py#
+/Users/samuellawson/workspace/resolute/resolute/index/downloaders/ieee_chunker.py
+/Users/samuellawson/workspace/resolute/resolute/index/downloaders/#ieee_chunker.py#
+/Users/samuellawson/workspace/resolute/test/unit/ieee/test_ieee_chunker.py
+/Users/samuellawson/workspace/resolute/test/unit/ieee/#test_ieee_chunker.py#
+/Users/samuellawson/workspace/resolute/resolute/index/downloaders/chunker_helpers.py
+/Users/samuellawson/workspace/resolute/resolute/index/downloaders/#chunker_helpers.py#
+/Users/samuellawson/workspace/resolute/resolute/index/downloaders/epo_chunker.py
+/Users/samuellawson/workspace/resolute/resolute/index/downloaders/#epo_chunker.py#
+/Users/samuellawson/workspace/resolute/resolute/utils/s3.py
+/Users/samuellawson/workspace/resolute/resolute/utils/#s3.py#
+/Users/samuellawson/workspace/resolute/test/unit/ieee/test_ieee_downloader.py
+/Users/samuellawson/workspace/resolute/test/unit/ieee/#test_ieee_downloader.py#

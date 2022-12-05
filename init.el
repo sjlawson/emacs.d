@@ -82,9 +82,11 @@
  '(ansi-color-names-vector
    ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
  '(custom-enabled-themes '(wheatgrass))
+ '(js-indent-level 2)
  '(package-selected-packages
-   '(jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode elpy ##)))
+   '(lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode elpy ##)))
 (custom-set-faces
+
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -133,3 +135,15 @@
   (global-set-key (kbd "C-c <left>") 'tabbar-backward-tab)
   )
 (run-with-timer 2 nil (lambda() (set-tabbar-nav-keys)))
+
+(require 'use-package)
+(use-package lsp-jedi
+  :ensure t
+  :config
+  (with-eval-after-load "lsp-mode"
+    (add-to-list 'lsp-disabled-clients 'pyls)
+    (add-to-list 'lsp-enabled-clients 'jedi)))
+
+(setq lsp-jedi-workspace-extra-paths
+  (vconcat lsp-jedi-workspace-extra-paths
+           ["/Users/samuellawson/workspace/venv_res/lib/python3.8/site-packages"]))

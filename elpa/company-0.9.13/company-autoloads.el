@@ -11,6 +11,7 @@
 
 (autoload 'company-mode "company" "\
 \"complete anything\"; is an in-buffer completion framework.
+
 Completion starts automatically, depending on the values
 `company-idle-delay' and `company-minimum-prefix-length'.
 
@@ -37,7 +38,23 @@ keymap during active completions (`company-active-map'):
 
 \\{company-active-map}
 
+This is a minor mode.  If called interactively, toggle the
+`Company mode' mode.  If the prefix argument is positive, enable
+the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `company-mode'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
 \(fn &optional ARG)" t nil)
+
+(put 'global-company-mode 'globalized-minor-mode t)
 
 (defvar global-company-mode nil "\
 Non-nil if Global Company mode is enabled.
@@ -51,30 +68,28 @@ or call the function `global-company-mode'.")
 
 (autoload 'global-company-mode "company" "\
 Toggle Company mode in all buffers.
-With prefix ARG, enable Global Company mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
+With prefix ARG, enable Global Company mode if ARG is positive; otherwise,
+disable it.
 
-Company mode is enabled in all buffers where
-`company-mode-on' would do it.
+If called from Lisp, toggle the mode if ARG is `toggle'.
+Enable the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+Company mode is enabled in all buffers where `company-mode-on' would do it.
+
 See `company-mode' for more information on Company mode.
 
 \(fn &optional ARG)" t nil)
 
-(autoload 'company-manual-begin "company" "\
-
-
-\(fn)" t nil)
+(autoload 'company-manual-begin "company" nil t nil)
 
 (autoload 'company-complete "company" "\
 Insert the common part of all candidates or the current selection.
 The first time this is called, the common part is inserted, the second
 time, or when the selection has been changed, the selected candidate is
-inserted.
+inserted." t nil)
 
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company" '("company-")))
+(register-definition-prefixes "company" '("company-"))
 
 ;;;***
 
@@ -87,7 +102,7 @@ inserted.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-abbrev" '("company-abbrev-insert")))
+(register-definition-prefixes "company-abbrev" '("company-abbrev-insert"))
 
 ;;;***
 
@@ -99,28 +114,28 @@ inserted.
 
 \(fn COMMAND &optional ARG &rest IGNORE)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-bbdb" '("company-bbdb-")))
+(register-definition-prefixes "company-bbdb" '("company-bbdb-"))
 
 ;;;***
 
 ;;;### (autoloads nil "company-capf" "company-capf.el" (0 0 0 0))
 ;;; Generated autoloads from company-capf.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-capf" '("company-")))
+(register-definition-prefixes "company-capf" '("company-"))
 
 ;;;***
 
 ;;;### (autoloads nil "company-clang" "company-clang.el" (0 0 0 0))
 ;;; Generated autoloads from company-clang.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-clang" '("company-clang")))
+(register-definition-prefixes "company-clang" '("company-clang"))
 
 ;;;***
 
 ;;;### (autoloads nil "company-cmake" "company-cmake.el" (0 0 0 0))
 ;;; Generated autoloads from company-cmake.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-cmake" '("company-cmake")))
+(register-definition-prefixes "company-cmake" '("company-cmake"))
 
 ;;;***
 
@@ -132,7 +147,7 @@ inserted.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-css" '("company-css-")))
+(register-definition-prefixes "company-css" '("company-css-"))
 
 ;;;***
 
@@ -145,7 +160,7 @@ dabbrev-like `company-mode' completion backend.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-dabbrev" '("company-dabbrev-")))
+(register-definition-prefixes "company-dabbrev" '("company-dabbrev-"))
 
 ;;;***
 
@@ -160,14 +175,14 @@ comments or strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-dabbrev-code" '("company-dabbrev-code-")))
+(register-definition-prefixes "company-dabbrev-code" '("company-dabbrev-code-"))
 
 ;;;***
 
 ;;;### (autoloads nil "company-eclim" "company-eclim.el" (0 0 0 0))
 ;;; Generated autoloads from company-eclim.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-eclim" '("company-eclim")))
+(register-definition-prefixes "company-eclim" '("company-eclim"))
 
 ;;;***
 
@@ -179,7 +194,7 @@ comments or strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-elisp" '("company-elisp-")))
+(register-definition-prefixes "company-elisp" '("company-elisp-"))
 
 ;;;***
 
@@ -191,7 +206,7 @@ comments or strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-etags" '("company-etags-")))
+(register-definition-prefixes "company-etags" '("company-etags-"))
 
 ;;;***
 
@@ -205,7 +220,7 @@ File paths with spaces are only supported inside strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-files" '("company-file")))
+(register-definition-prefixes "company-files" '("company-file"))
 
 ;;;***
 
@@ -217,7 +232,7 @@ File paths with spaces are only supported inside strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-gtags" '("company-gtags-")))
+(register-definition-prefixes "company-gtags" '("company-gtags-"))
 
 ;;;***
 
@@ -230,7 +245,7 @@ File paths with spaces are only supported inside strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-ispell" '("company-ispell-")))
+(register-definition-prefixes "company-ispell" '("company-ispell-"))
 
 ;;;***
 
@@ -243,7 +258,7 @@ File paths with spaces are only supported inside strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-keywords" '("company-keywords-")))
+(register-definition-prefixes "company-keywords" '("company-keywords-"))
 
 ;;;***
 
@@ -255,7 +270,7 @@ File paths with spaces are only supported inside strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-nxml" '("company-nxml-")))
+(register-definition-prefixes "company-nxml" '("company-nxml-"))
 
 ;;;***
 
@@ -268,7 +283,7 @@ File paths with spaces are only supported inside strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-oddmuse" '("company-oddmuse-")))
+(register-definition-prefixes "company-oddmuse" '("company-oddmuse-"))
 
 ;;;***
 
@@ -281,7 +296,7 @@ File paths with spaces are only supported inside strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-semantic" '("company-semantic-")))
+(register-definition-prefixes "company-semantic" '("company-semantic-"))
 
 ;;;***
 
@@ -289,7 +304,7 @@ File paths with spaces are only supported inside strings.
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from company-template.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-template" '("company-template-")))
+(register-definition-prefixes "company-template" '("company-template-"))
 
 ;;;***
 
@@ -301,7 +316,7 @@ File paths with spaces are only supported inside strings.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-tempo" '("company-tempo-")))
+(register-definition-prefixes "company-tempo" '("company-tempo-"))
 
 ;;;***
 
@@ -317,11 +332,9 @@ confirm the selection and finish the completion.
 \(fn COMMAND)" nil nil)
 
 (autoload 'company-tng-configure-default "company-tng" "\
-Applies the default configuration to enable company-tng.
+Applies the default configuration to enable company-tng." nil nil)
 
-\(fn)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-tng" '("company-tng--")))
+(register-definition-prefixes "company-tng" '("company-tng--"))
 
 ;;;***
 
@@ -333,7 +346,7 @@ Applies the default configuration to enable company-tng.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-xcode" '("company-xcode-")))
+(register-definition-prefixes "company-xcode" '("company-xcode-"))
 
 ;;;***
 
@@ -351,22 +364,22 @@ shadow backends that come after it.  Recommended usages:
 * In a buffer-local value of `company-backends', grouped with a backend or
   several that provide actual text completions.
 
-  (add-hook \\='js-mode-hook
+  (add-hook 'js-mode-hook
             (lambda ()
-              (set (make-local-variable \\='company-backends)
-                   \\='((company-dabbrev-code company-yasnippet)))))
+              (set (make-local-variable 'company-backends)
+                   '((company-dabbrev-code company-yasnippet)))))
 
 * After keyword `:with', grouped with other backends.
 
-  (push \\='(company-semantic :with company-yasnippet) company-backends)
+  (push '(company-semantic :with company-yasnippet) company-backends)
 
 * Not in `company-backends', just bound to a key.
 
-  (global-set-key (kbd \"C-c y\") \\='company-yasnippet)
+  (global-set-key (kbd \"C-c y\") 'company-yasnippet)
 
 \(fn COMMAND &optional ARG &rest IGNORE)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-yasnippet" '("company-yasnippet-")))
+(register-definition-prefixes "company-yasnippet" '("company-yasnippet-"))
 
 ;;;***
 
