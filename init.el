@@ -73,7 +73,7 @@
 (autoload 'csv-mode "csv-mode"
   "Major mode for editing comma-separated value files." t)
 
-(add-to-list 'load-path "/Users/samuellawson/.emacs.d/elpy")
+(add-to-list 'load-path "~/.emacs.d/elpy")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -126,8 +126,8 @@
 ;; (require 'blacken)
 ;; (setq blacken-line-length 88)
 
-(set-frame-font
-    "-outline-Courier New-normal-normal-normal-mono-15-*-*-*-c-*-iso8859-1")
+;; (set-frame-font
+;;     "-outline-Courier New-normal-normal-normal-mono-15-*-*-*-c-*-iso8859-1")
 
 (setq mac-command-modifier 'meta)
 

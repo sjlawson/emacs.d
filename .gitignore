@@ -1,6 +1,7 @@
 *pyc
-.cache/
+.cache/*
 elpy
 auto-save-list
 .#*
 #*
+*.elc
