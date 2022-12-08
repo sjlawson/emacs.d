@@ -1,0 +1,2 @@
+;;; Generated package description from ts.el  -*- no-byte-compile: t -*-
+(define-package "ts" "0.2.2" "Timestamp and date/time library" '((emacs "26.1") (dash "2.14.1") (s "1.12.0")) :commit "0bf2ac9680ae077d6f110ea0629728fbc654e945" :authors '((nil . "Adam Porter <adam@alphapapa.net")) :maintainer '(nil . "Adam Porter <adam@alphapapa.net") :keywords '("date" "time" "timestamp") :url "http://github.com/alphapapa/ts.el")

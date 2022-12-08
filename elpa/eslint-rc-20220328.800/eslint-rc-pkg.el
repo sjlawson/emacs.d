@@ -1,0 +1,2 @@
+;;; Generated package description from eslint-rc.el  -*- no-byte-compile: t -*-
+(define-package "eslint-rc" "20220328.800" "Use local rc rules with ESLint" '((emacs "24.3") (eslint-fix "0.1.0")) :commit "eb6f3e715792952bc957d5dc8ab1a607f3dbbd55" :authors '(("Joel Bryan Juliano <joelbryan dot juliano at gmail dot com>")) :maintainer '("Joel Bryan Juliano <joelbryan dot juliano at gmail dot com>") :keywords '("convenience" "edit" "js" "ts" "rc" "eslintrc" "eslint-rc" "eslint" "eslint-fix") :url "https://github.com/jjuliano/eslint-rc-emacs")
