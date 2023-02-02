@@ -1,0 +1,2 @@
+;;; Generated package description from iter2.el  -*- no-byte-compile: t -*-
+(define-package "iter2" "1.4" "Reimplementation of Elisp generators" '((emacs "25.1")) :commit "37913b80fb7a2b6c265378c55ea50d502f2cce77" :authors '(("Paul Pogonyshev" . "pogonyshev@gmail.com")) :maintainer '("Paul Pogonyshev" . "pogonyshev@gmail.com") :keywords '("elisp" "extensions") :url "https://github.com/doublep/iter2")
