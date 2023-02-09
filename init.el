@@ -127,7 +127,7 @@
 ;; (setq blacken-line-length 88)
 
 ;; (set-frame-font
-;;     "-outline-Courier New-normal-normal-normal-mono-15-*-*-*-c-*-iso8859-1")
+;;    "-outline-Courier New-normal-normal-normal-mono-15-*-*-*-c-*-iso8859-1")
 
 (setq mac-command-modifier 'meta)
 
@@ -157,4 +157,4 @@
   (vconcat lsp-jedi-workspace-extra-paths
            ["/Users/samuellawson/workspace/venv_res/lib/python3.8/site-packages"]))
 
-(set-face-attribute 'default nil :font "-outline-Monaco-normal-normal-normal-mono-14-*-*-*-c-*-iso8859-1" )
+;; (set-face-attribute 'default nil :font "-outline-Monaco-normal-normal-normal-mono-14-*-*-*-c-*-iso8859-1" )
