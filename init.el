@@ -85,7 +85,7 @@
    '("854f83f6a13c588984dc57d800101ee292b95918d3794e60f51a45190c38e2ab" default))
  '(js-indent-level 2)
  '(package-selected-packages
-   '(magit prettier ts es-mode hacker-typer eslint-rc lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode ##))
+   '(xml-format magit prettier ts es-mode hacker-typer eslint-rc lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode ##))
  '(warning-suppress-types '((lsp-mode) (lsp-mode) (lsp-mode))))
 
 (load "elpy")
