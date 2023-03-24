@@ -1,0 +1,2 @@
+;;; Generated package description from elisp-lint-0.4.0/elisp-lint.el  -*- no-byte-compile: t -*-
+(define-package "elisp-lint" "0.4.0" "Basic linting for Emacs Lisp" '((emacs "24.4") (dash "2.15.0") (package-lint "0.11")) :commit "2b645266be8010a6a49c6d0ebf6a3ad5bd290ff4" :authors '(("Nikolaj Schumacher <bugs * nschum de>,")) :maintainer '("Neil Okamoto" . "neil.okamoto+melpa@gmail.com") :keywords '("lisp" "maint" "tools") :url "http://github.com/gonewest818/elisp-lint/")

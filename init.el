@@ -83,9 +83,10 @@
  '(custom-enabled-themes '(toxi))
  '(custom-safe-themes
    '("854f83f6a13c588984dc57d800101ee292b95918d3794e60f51a45190c38e2ab" default))
+ '(elpy-syntax-check-command "flake8")
  '(js-indent-level 2)
  '(package-selected-packages
-   '(xml-format magit prettier ts es-mode hacker-typer eslint-rc lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode ##))
+   '(flycheck-pycheckers elisp-lint eldoc-box eldoc pydoc blacken s company-anaconda company-jedi xml-format magit prettier ts es-mode hacker-typer eslint-rc lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode ##))
  '(warning-suppress-types '((lsp-mode) (lsp-mode) (lsp-mode))))
 
 (load "elpy")
@@ -103,22 +104,21 @@
  '(treemacs-file-face ((t (:foreground "#aabbff")))))
 
 (setq default-frame-alist
-       '((height . 55)
+       '((height . 50)
          (width . 174)
-         (left . 100)
-         (top . 50)
+         (top . 1)
          (vertical-scroll-bars . nil)
          (horizontal-scroll-bars . nil)
          (tool-bar-lines . 1)))
 
-;; (when window-system (set-frame-size (selected-frame) 200 47))
-;; (add-to-list 'default-frame-alist '(height . 47))
-;; (add-to-list 'default-frame-alist '(width . 200))
+(when window-system (set-frame-size (selected-frame) 174 50))
+(add-to-list 'default-frame-alist '(height . 50))
+(add-to-list 'default-frame-alist '(width . 174))
 
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (load "elpy")
 (elpy-enable)
-
+(setq elpy-rpc-python-command "python")
 ;; (let ((filename "~/.emacs.d/startup.txt"))
 ;;   (when (file-exists-p filename)
 ;;     (setq initial-buffer-choice filename)))
@@ -126,10 +126,7 @@
 ;; (require 'blacken)
 ;; (setq blacken-line-length 88)
 
-;; (set-frame-font
-;;    "-outline-Courier New-normal-normal-normal-mono-15-*-*-*-c-*-iso8859-1")
-
-(setq mac-command-modifier 'meta)
+;; (setq mac-command-modifier 'meta)
 
 (eval-after-load "elpy"
   '(cl-dolist (key '("M-<left>" "M-<right>"))
@@ -137,7 +134,7 @@
 
 (require 'treemacs)
 (tabbar-mode)
-(run-with-timer 1 nil (lambda () (save-selected-window (treemacs))))
+;; (run-with-timer 1 nil (lambda () (save-selected-window (treemacs))))
 
 (defun set-tabbar-nav-keys ()
   (global-set-key (kbd "C-c <right>") 'tabbar-forward-tab)
@@ -153,8 +150,32 @@
     (add-to-list 'lsp-disabled-clients 'pyls)
     (add-to-list 'lsp-enabled-clients 'jedi)))
 
-(setq lsp-jedi-workspace-extra-paths
-  (vconcat lsp-jedi-workspace-extra-paths
-           ["/Users/samuellawson/workspace/venv_res/lib/python3.8/site-packages"]))
+;; python/pydoc bindings
+(add-hook 'python-mode-hook
+      (lambda ()
+        (local-set-key (kbd "C-h f") 'pydoc-at-point)))
 
-;; (set-face-attribute 'default nil :font "-outline-Monaco-normal-normal-normal-mono-14-*-*-*-c-*-iso8859-1" )
+(defun pydoc-at-point ()
+  "Run `pydoc' on the word around point."
+  (interactive)
+  (pydoc (python-eldoc--get-symbol-at-point)))
+
+(defun pydoc (word)
+  "Run `pydoc' on WORD."
+  (interactive
+   (list (let* ((default-entry (python-eldoc--get-symbol-at-point))
+                (input (read-string
+                        (format "pydoc entry%s: "
+                                (if (string= default-entry "")
+                                    ""
+                                  (format " (default %s)" default-entry))))))
+           (if (string= input "")
+               (if (string= default-entry "")
+                   (error "No pydoc args given")
+                 default-entry)
+             input))))
+  (require 'man)
+  (let* ((case-fold-search nil)
+     (Man-switches nil)
+     (manual-program "pydoc"))
+    (Man-getpage-in-background word)))
