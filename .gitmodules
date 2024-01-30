@@ -1,0 +1,3 @@
+[submodule "emacs-easy-jekyll"]
+	path = emacs-easy-jekyll
+	url = git@github.com:masasam/emacs-easy-jekyll.git
