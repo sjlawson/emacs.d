@@ -57,8 +57,11 @@
   (save-excursion
     (unless (eq major-mode 'markdown-mode)
       (delete-trailing-whitespace)
+      )
+    (unless (eq major-mode 'makefile-gmake-mode)
+      (untabify (point-min) (point-max)))
     )
-    (untabify (point-min) (point-max))))
+  )
 
 (setq delete-trailing-whitespace t)
 (add-hook 'before-save-hook 'ktw-buffer-clean)
@@ -85,13 +88,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(codeium/metadata/api_key "a563aa8b-5f09-4fec-bb59-5770d6140652")
- '(custom-enabled-themes '(zenburn))
+ '(custom-enabled-themes '(wheatgrass))
  '(custom-safe-themes
    '("bb8f8516765a86eae482d32ec956479719217c2c5322f18652a7126dc82a8241" "2dc03dfb67fbcb7d9c487522c29b7582da20766c9998aaad5e5b63b5c27eec3f" "854f83f6a13c588984dc57d800101ee292b95918d3794e60f51a45190c38e2ab" default))
  '(elpy-syntax-check-command "flake8")
  '(js-indent-level 2)
  '(package-selected-packages
-   '(flymake-eslint flymake-python-pyflakes flymake-jslint flymake-css flymake yaml-mode dockerfile-mode nodejs-repl flycheck-pycheckers elisp-lint eldoc-box eldoc pydoc blacken s company-anaconda company-jedi xml-format magit prettier ts es-mode hacker-typer eslint-rc lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode ##))
+   '(ess flymake-eslint flymake-python-pyflakes flymake-jslint flymake-css flymake yaml-mode dockerfile-mode nodejs-repl flycheck-pycheckers elisp-lint eldoc-box eldoc pydoc blacken s company-anaconda company-jedi xml-format magit prettier ts es-mode hacker-typer eslint-rc lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode ##))
  '(typescript-indent-level 2)
  '(warning-suppress-types '((lsp-mode) (lsp-mode) (lsp-mode))))
 
