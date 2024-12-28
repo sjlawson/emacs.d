@@ -12,29 +12,7 @@
 * inscotgames
 ** ssi_jekyll
  - path :: ~/workspace/ssi_v2/ssi_jekyll
-* Music Sites
-** music_and_beyond
- - path :: ~/workspace/music_and_beyond/music_and_beyond
 * personal
 ** sjlawson.github.io
  - path :: ~/workspace/sjlawson.github.io
-* ark
-** ark-tts-engine
- - path :: ~/sfu/ark/ark-tts-engine
-** ark-project-rtc-server
- - path :: ~/sfu/ark/ark-project-rtc-server
-** ark-demo-api
- - path :: ~/sfu/ark/ark-demo-api
-** ark-demo-ui
- - path :: ~/sfu/ark/ark-demo-ui
-** ark-demo-k8s
- - path :: ~/sfu/ark/ark-demo-k8s
-** ae-listener
- - path :: ~/sfu/ark/ae-listener
-** arkproject-alter-ego
- - path :: ~/sfu/ark/arkproject-alter-ego
-** ark-project-rtc-server
- - path :: ~/sfu/ark/ark-project-rtc-server
-
-A
 

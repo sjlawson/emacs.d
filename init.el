@@ -94,7 +94,7 @@
  '(elpy-syntax-check-command "flake8")
  '(js-indent-level 2)
  '(package-selected-packages
-   '(ess flymake-eslint flymake-python-pyflakes flymake-jslint flymake-css flymake yaml-mode dockerfile-mode nodejs-repl flycheck-pycheckers elisp-lint eldoc-box eldoc pydoc blacken s company-anaconda company-jedi xml-format magit prettier ts es-mode hacker-typer eslint-rc lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode ##))
+   '(rjsx-mode ess flymake-eslint flymake-python-pyflakes flymake-jslint flymake-css flymake yaml-mode dockerfile-mode nodejs-repl flycheck-pycheckers elisp-lint eldoc-box eldoc pydoc blacken s company-anaconda company-jedi xml-format magit prettier ts es-mode hacker-typer eslint-rc lsp-jedi company auto-complete jedi importmagic browse-url-dwim tabbar typescript-mode markdown-mode ##))
  '(typescript-indent-level 2)
  '(warning-suppress-types '((lsp-mode) (lsp-mode) (lsp-mode))))
 

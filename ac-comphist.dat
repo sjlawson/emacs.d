@@ -1,2 +1,16 @@
-((("clear_dtd_files" .
+((("value" .
+   [1 0 0 0 0])
+  ("Weekdays" .
+   [3 0 0 0 0 1 0 0])
+  ("weekday" .
+   [1 0 1 0 0 0 0])
+  ("__str__" .
+   [0 0 0 0 0 0 1])
+  ("choices" .
+   [0 0 1 0 1 0 0])
+  ("IntegerChoices" .
+   [0 0 1 0 1 0 0 0 0 0 0 0 0 0])
+  ("models" .
+   [0 0 1 0 0 3])
+  ("clear_dtd_files" .
    [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])))
